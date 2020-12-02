@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url(new.jpg);
+   height: 100%;
+   background-position: center;
+   background-size: cover;
+}
+.list{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-image: linear-gradient(blueviolet, black);
+    height: 70px;
+}
+.list ul li{
+  list-style-type: none;
+  display: inline-block;
+  margin-top: 30px;
+}
+#main{
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    outline: none;
+}
+.list ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    padding: 10px 25px;
+}
+.list ul li a:hover{
+    border-bottom: 2px solid grey;
+    background: transparent;
+ }
+ .card{
+    height: 360px;
+    width: 360px;
+    border-radius: 50%;
+    position: relative;
+    margin: 10% auto;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: black;
+    overflow: hidden;
+}
+.card span{
+    height: 100%;
+    background: url(on.jpg);
+    position: absolute;
+    left: 0;
+    transition: 1s;
+    background-size: cover;
+    border-radius: 50%;
+}
+.card span:nth-child(1){
+    z-index: 10;
+    width: 25%;
+    transition-delay: 0s;
+}
+.card span:nth-child(2){
+    z-index: 9;
+    width: 50%;
+    transition-delay: 0.3s;
+}
+.card span:nth-child(3){
+    z-index: 8;
+    width: 75%;
+    transition-delay: 0.6s;
+}
+.card span:nth-child(4){
+    z-index: 7;
+    width: 100%;
+    transition-delay: 0.8s;
+}
+.card:hover span{
+    transform: translate(-100%);
+    transition: 1s;
+}
+.card:hover span:nth-child(1){
+    transition-delay: 0.8s;
+}
+.card:hover span:nth-child(2){
+    transition-delay: 0.6s;
+}
+.card:hover span:nth-child(3){
+    transition-delay: 0.3s;
+}
+.card:hover span:nth-child(4){
+    transition-delay: 0s;
+}
+.content{
+    color: white;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 80px 20px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 2s;
+}
+.content p{
+    color: gray;
+}
+.content a{
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    width: 100px;
+    border: 1px solid white;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+}
+.content a:hover{
+    background-color: white;
+    color: black;
+    border: transparent;
+}
+.card:hover .content{
+    transform: translateY(0%);
+}
+.pragraph{
+    height: 200px;
+    width: 100%;
+    margin-top: -100px;
+}
+.pragraph h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+.pragraph p{
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+.pragraph span{
+    color: blueviolet;
+    filter: brightness(100%);
+}
+.pragraph a{
+    position: relative;
+    text-decoration: none;
+    top: 20px;
+    left: 46%;
+    padding: 10px 30px;
+    border: 1px solid blue;
+    border-radius: 20px;
+    color: white;
+}
+.footer{
+    height: 20px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    top: 100px;
+}
+.footer h4{
+    color: white;
+    float: right;
+}
+button{
+    top: 30px;
+    left: 570px;
+    height: 40px;
+    width: 110px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    background-image: linear-gradient(90deg, #03a9f4,#f441a4,#ffeb3d,#03a9f4);
+    background-size: 400%;
+}
+button:before{
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 20px;
+    filter: blur(20px);
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+}
+button:hover:before{
+    opacity: 1;
+    z-index: -1;
+}
+button:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+@keyframes glow{
+    form{
+        background-position: 0%;
+    }
+    to{
+        background-position: 400%;
+    }
+}
+.div1{
+    animation-name: anime;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    height: 350px;
+    width: 100%;
+    margin-top: 20px;
+}
+@keyframes anime{
+    0%{
+        background-image: url(image/ban5.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        width: 100%;
+    }
+    25%{
+        background-image: url(image/ban2.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        width: 100%;
+    }
+    50%{
+        background-image: url(image/ban3.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        width: 100%;
+    }
+    75%{
+        background-image: url(image/ban4.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        width: 100%;
+    }
+    100%{
+        background-image: url(image/ban1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        width: 100%;
+    }
+    }
+.footer{
+    height: 260px;
+    width: 100%;
+    background-color: #000000;
+    overflow: hidden;
+}
+.footer a{
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    margin: 60px;
+    text-decoration: none;
+    color: #525859;
+    
+}
+hr{
+    width: 90%;
+    position: relative;
+    left: 60px;
+    color: #525859;
+}
+.fab{
+    color: #525859;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.fas{
+    color: #525859;
+    padding-left: 30px;
+    cursor: pointer;
+
+}
+.far{
+    color: #525859;
+    margin-top: 10px;
+}
+.icon{
+    margin-top: 55px;
+    margin-left: 60px;
+}
+#hr{
+    position: relative;
+    left: -3px;
+    width: 1140px;
+    margin-top: 15px;
+}
+.footer p{
+    position: relative;
+    top: -20px;
+    color: #525859;
+    left: 20px;
+}
